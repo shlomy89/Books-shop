@@ -36,14 +36,14 @@
                 <div class="rate-filter-cont">
                     <label data-trans="rate-filter-lable" class="rate-filter">Min Rate:</label>
                     <input type="range" min="0" max="9" value="0" class="filter-min-rate"
-                        onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+                        oninput="this.title=this.value;onSetFilterBy({minRate: this.value})" />
                     <label class="rate-filter-label">0</label>
                 </div>
 
                 <div class="price-filter-cont">
                     <label data-trans="price-filter-lable" class="price-filter">Max Price:</label>
                     <input type="range" min="0" max="200" value="200" class="filter-max-price"
-                        onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+                        oninput="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
                     <label class="price-filter-label">200</label>
                 </div>
             </div>
