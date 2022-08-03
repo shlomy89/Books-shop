@@ -1,0 +1,176 @@
+body {
+    background-color: rgb(243, 246, 248) !important;
+    margin-top: 100px !important;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.rtl {
+    direction: rtl;
+}
+
+.filter-top {
+    width: 800px;
+    margin: auto;
+}
+
+.select-lang {
+    margin-left: 70px;
+    margin-right: 60px;
+}
+
+.search {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.price-filter,
+.rate-filter {
+    display: block;
+    margin: 10px;
+
+}
+
+.price-filter-cont,
+.rate-filter-cont {
+    display: inline-block;
+    background-color: rgba(202, 202, 202, 0.475);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.price-filter-cont {
+    margin-left: 3em;
+}
+
+.price-filter-label,
+.rate-filter-label {
+    border: 2px solid rgb(0, 0, 0);
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+}
+
+.price-filter-cont.rtl {
+    margin-right: 3em;
+    margin-left: 0px;
+}
+
+.btn-primary {
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.search {
+    margin-bottom: 20px;
+    /* display: inline; */
+}
+
+.table-container {
+    margin: auto;
+    padding: 12px;
+    width: 800px
+}
+
+.table {
+    text-align: center;
+}
+
+.btn-warning {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+th {
+    background-color: antiquewhite !important;
+}
+
+th.id {
+    width: 10%;
+}
+
+th.title {
+    width: 30%;
+}
+
+th.price {
+    width: 15%;
+}
+th.price {
+    width: 10%;
+}
+
+th.action {
+    width: 35%;
+}
+
+.my-modal {
+    transition: top 0.5s;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    z-index: 10;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 1.5em;
+    width: 230px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 50%);
+}
+
+.my-modal.open {
+    top: 1%;
+    transition: top 0.5s;
+}
+
+.my-modal .id, .id-cont,
+.my-modal .name, .name-cont,
+.my-modal .price, .price-cont,
+.my-modal .rate, .rate-cont{
+    margin: auto;
+    text-align: center;
+    display: inline;
+    padding-top: 8px;
+    font-size: 22px;
+    color: #44285e;
+    text-shadow: 2px 2px rgb(0 0 0 / 20%);
+}
+
+
+
+
+
+
+.change-rate {
+    margin-top: 15px;
+}
+
+.my-modal img {
+    margin-top: -20px;
+    margin-right: 10px;
+    height: 100px;
+}
+
+.my-modal button {
+    display: block;
+    margin: auto;
+    width: 90px;
+    height: 30px;
+    margin-top: 20px;
+    font-weight: bold;
+    border: rgb(0, 0, 0) solid 1.5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.page-idx-container {
+    border: 2px solid rgb(0, 0, 0);
+    display: inline-block;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+}

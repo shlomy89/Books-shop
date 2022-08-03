@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+    <title>Books Shop</title>
+</head>
+
+<body>
+
+    <body onload="onInit()">
+
+        <h1 data-trans="title">Welcome to the Books Shop</h1>
+
+        <section class="filter-top">
+            <button class="btn btn-primary create-book" data-trans="create-book-btn" onclick="onAddBook()">Create new
+                book</button>
+
+            <select class="select-lang" onchange="onSetLang(this.value)">
+                <option>Select Language</option>
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
+
+            <form class="search">
+                <input data-trans="search-placeholder" oninput="onSetSearch()" type="text" name="search-str"
+                    placeholder="Search by name" />
+            </form>
+
+            <div class="filters-cont">
+                <div class="rate-filter-cont">
+                    <label data-trans="rate-filter-lable" class="rate-filter">Min Rate:</label>
+                    <input type="range" min="0" max="9" value="0" class="filter-min-rate"
+                        onchange="this.title=this.value;onSetFilterBy({minRate: this.value})" />
+                    <label class="rate-filter-label">0</label>
+                </div>
+
+                <div class="price-filter-cont">
+                    <label data-trans="price-filter-lable" class="price-filter">Max Price:</label>
+                    <input type="range" min="0" max="200" value="200" class="filter-max-price"
+                        onchange="this.title=this.value;onSetFilterBy({maxPrice: this.value})" />
+                    <label class="price-filter-label">200</label>
+                </div>
+            </div>
+        </section>
+
+        <div class="my-modal">
+            <p><span class="modal-img"></span>
+            <p><span class="id" data-trans="modal-id">Id: </span><span class="id-cont"></span></p>
+            <p><span class="name" data-trans="modal-name">Name: </span><span class="name-cont"></span></p>
+            <p><span class="price" data-trans="modal-price">Price: </span><span class="price-cont"></span></p>
+            <p><span class="rate" data-trans="modal-rate">Rate: </span><span class="rate-cont"></span></p>
+            <p><span class="change-rate"></span></p>
+            <p><button data-trans="modal-btn" onclick="onCloseModal()">Close</button></p>
+        </div>
+
+        <div class="table-container">
+            <table class="books-table table table-striped">
+                <thead>
+                    <th data-trans="table-id" class="id">Id</th>
+                    <th data-trans="table-title" class="title">Title</th>
+                    <th data-trans="table-price" class="price">Price</th>
+                    <th data-trans="table-rate" class="rate">Rate</th>
+                    <th data-trans="table-action" class="action">Actions</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+            <div class="pages-conatiner">
+                <button data-trans="previous-btn" disabled class="btn btn-secondary previous-page"
+                    onclick="onPreviousPage()">Prev Page</button>
+                <div class="page-idx-container">
+                    <label class="page-idx">1</label>
+                </div>
+                <button data-trans="next-btn" class="btn btn-secondary next-page" onclick="onNextPage()">Next
+                    Page</button>
+            </div>
+        </div>
+        <script src="js/services/util.service.js"></script>
+        <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+        <script src="js/services/i18n.service.js"></script>
+        <script src="js/services/storage.service.js"></script>
+        <script src="js/services/books.service.js"></script>
+        <script src="js/books.controller.js"></script>
+    </body>
+
+</html>
