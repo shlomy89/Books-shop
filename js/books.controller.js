@@ -67,7 +67,7 @@ function onReadBook(bookId) {
     elmyModal.querySelector('.id-cont').innerText = `${book.id}`
     elmyModal.querySelector('.name-cont').innerText = `${book.name}`
     elmyModal.querySelector('.price-cont').innerText = `${book.price} ₪`
-    elmyModal.querySelector('.modal-img').innerHTML = `<img src="/img/new_book.png" alt="">`
+    elmyModal.querySelector('.modal-img').innerHTML = `<img src="img/new_book.png" alt="">`
     elmyModal.querySelector('.rate-cont').innerText = `${book.rate}`
     elChangeRate.innerHTML = `<input onchange="onSetBookRate(this.value, '${bookId}')" type="number" class="change-rate" value="0" min="0" max="10" step="1"/>`
 }
